@@ -1,0 +1,155 @@
+/*START public*/ 
+
+
+
+/*START 标题与内容居中*/
+#md-title-row{
+	text-align:center;
+}
+#md-title{
+	margin:0 auto;
+}
+
+#md-content-row{
+	text-align:center;
+}
+#md-content{
+	margin:0 auto;
+	font-size:16px;
+}
+#md-page-menu ul.list-group{
+	text-align:left;
+}
+/*END 标题与内容居中*/
+
+
+.grid-1{
+font-size: 0px;
+clear:both;
+/*
+子元素使用float浮动属性后，父元素没高度不能自适应高度
+解决方法：1.给父元素设定固定高度；2.添加一对象盒子，带属性clear:both; 在父元素结束标签之前，如</div>，示例<div><div style="clear:both;"></div></div> ；3.给父元素添加overflow:hidden样式即可
+*/
+overflow:hidden;
+
+
+}
+
+.grid-1 p {
+	width:33.33%;
+	/*
+	添加float浮动样式时，浮动元素的高度会不同，所以浮动元素添加font-size样式，同时浮动元素的父元素添加font-size:0px; 这样浮动元素高度就相同了
+	*/
+
+	float:left;
+	font-size: 12px;
+	padding-bottom:10px;
+	padding-left:125px;	
+	padding-right:10px;
+	/*背景图像将仅显示一次*/
+	background-repeat:no-repeat ;
+	text-align: left;
+	vertical-align:bottom;
+
+}
+
+.SPantitle{
+	font-size:20px;	
+	display:block;
+	margin-top:-20px;
+	
+}
+.SPancontent{	
+    font-size:15px ;
+	display:block;
+	margin-top:-10px;
+}
+
+.hrDesktop{
+	clear:both;
+	
+	
+	background-color:red;
+	height:1px;
+	border:none;
+}
+
+.hrPad{
+	display:none;
+	clear:both;
+
+
+	background-color:orange;
+	height:1px;
+	border:none;
+
+
+}
+
+.hrPhone{
+	display:none;
+	clear:both;
+}
+.hrPhone:nth-of-type(3n+0){
+	display:block;
+	clear:both;
+}
+
+/*END public*/ 
+
+@media screen and (max-width:1020px){ /*START 1020px*/ 
+.grid-1 p{
+	width:50%;
+	float:left;
+}
+.hrPhone:nth-of-type(3n+0){
+	display:none;
+	clear:both;
+}
+
+.hrPhone:nth-of-type(2n+0){
+	display:block;
+	clear:both;
+}
+
+
+.grid-1{
+	margin-left:40px;
+	margin-right:40px;
+}
+
+.linkStyle{
+	margin-left:30%;
+}
+
+/*END 1020px*/}
+
+
+@media screen and (max-width:768px){/*START 768px*/ 
+.grid-1 p{
+	width:100%;
+	float:left;
+}
+
+.hrPhone:nth-of-type(2n+0){
+	display:none;
+	clear:both;
+}
+
+.hrPhone:nth-of-type(1n+0){
+	display:block;
+	clear:both;	
+}
+
+.linkStyle{
+	margin-left:25%;
+}
+
+/*END 768px*/}
+
+
+
+
+
+
+
